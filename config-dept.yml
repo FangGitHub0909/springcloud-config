@@ -1,0 +1,62 @@
+spring:
+  profiles:
+  active: dev
+
+---
+
+server:
+  port: 8001
+spring:
+  profiles: dev
+  application:
+    name: springcloud-config-dept
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/clouddb01?useEncode=true&characther=utf-8
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  type-aliases-package: com.fang.springcloud
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: springcloud-provider-dept-8001 #修改Eureka上的默认描述信息
+info:
+  app.name: haust-springcloud #项目名称
+  company.name: com.fang #公司的名称
+---
+
+server:
+  port: 8001
+spring:
+  profiles: dev
+  application:
+    name: springcloud-config-dept
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/clouddb02?useEncode=true&characther=utf-8
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  type-aliases-package: com.fang.springcloud
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: springcloud-provider-dept-8001 #修改Eureka上的默认描述信息
+info:
+  app.name: haust-springcloud #项目名称
+  company.name: com.fang #公司的名称
