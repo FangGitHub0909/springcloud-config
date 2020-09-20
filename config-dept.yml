@@ -27,16 +27,16 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: springcloud-provider-dept-8001 #ĞŞ¸ÄEurekaÉÏµÄÄ¬ÈÏÃèÊöĞÅÏ¢
+    instance-id: springcloud-provider-dept-8001 #ä¿®æ”¹Eurekaä¸Šçš„é»˜è®¤æè¿°ä¿¡æ¯
 info:
-  app.name: haust-springcloud #ÏîÄ¿Ãû³Æ
-  company.name: com.fang #¹«Ë¾µÄÃû³Æ
+  app.name: haust-springcloud #é¡¹ç›®åç§°
+  company.name: com.fang #å…¬å¸çš„åç§°
 ---
 
 server:
   port: 8001
 spring:
-  profiles: dev
+  profiles: test
   application:
     name: springcloud-config-dept
   datasource:
@@ -56,7 +56,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: springcloud-provider-dept-8001 #ĞŞ¸ÄEurekaÉÏµÄÄ¬ÈÏÃèÊöĞÅÏ¢
+    instance-id: springcloud-provider-dept-8001 #ä¿®æ”¹Eurekaä¸Šçš„é»˜è®¤æè¿°ä¿¡æ¯
 info:
-  app.name: haust-springcloud #ÏîÄ¿Ãû³Æ
-  company.name: com.fang #¹«Ë¾µÄÃû³Æ
+  app.name: haust-springcloud #é¡¹ç›®åç§°
+  company.name: com.fang #å…¬å¸çš„åç§°
